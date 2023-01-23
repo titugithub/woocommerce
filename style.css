@@ -16,3 +16,21 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+.breadcrumb-section{
+    background: url('img/breadcrumb.jpg') !important;
+}
+
+.product__discount__percent {
+    height: 45px;
+    width: 45px;
+    background: #dd2222;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 45px;
+    text-align: center;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
