@@ -28,16 +28,19 @@ if (empty($product) || !$product->is_visible()) {
 <li <?php wc_product_class('', $product); ?>>
 	<div class="product__item">
 		<div style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);" class="product__item__pic set_bg">
-			<?php woocommerce_show_product_loop_sale_flash()?>
+			<?php woocommerce_show_product_loop_sale_flash() ?>
 			<ul class="product__item__pic__hover">
-				<li><a href="#"><i class="fa fa-heart"></i></a></li>
-				<li><a href="#"><i class="fa fa-retweet"></i></a></li>
-				<li><a href="#"><?php woocommerce_template_loop_add_to_cart() ?></a></li>
+				<li><?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?></li>
+				<li><a href="<?php echo site_url(); ?>/?action=yith-woocompare-view-table&amp;iframe=yes" class="compare button" data-product_id="<?php echo get_the_ID(); ?>" rel="nofollow"><i class="fa fa-retweet"></i></a></li>
+				<li><a href="<?php echo site_url(); ?>/?add-to-cart=<?php echo get_the_ID(); ?>" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="<?php echo get_the_ID(); ?>"><i class="fa fa-shopping-cart"></i></a></li>
 			</ul>
 		</div>
 		<div class="product__item__text">
-			<h6><a href="<?php the_permalink() ?>"><?php woocommerce_template_loop_product_title() ?></a></h6>
-			<h5><?php woocommerce_template_loop_price() ?></h5>
+			<span><?php $categ = $product->get_categories();
+					echo $categ; ?>
+			</span>
+			<a href="<?php the_permalink(); ?>"><?php woocommerce_template_loop_product_title(); ?></a>
+			<h5><?php woocommerce_template_loop_price(); ?></h5>
 		</div>
 	</div>
 	<?php

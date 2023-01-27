@@ -33,4 +33,70 @@ Use it to make something cool, have fun, and share what you've learned with othe
     left: 15px;
     top: 15px;
 }
+.woocommerce a.button {
+  font-size: 16px;
+  color: #1c1c1c;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #ebebeb;
+  background: #ffffff;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 0;
+  transition: all, 0.5s;
+}
+.woocommerce a.button:hover {
+  background-color: #7fad39;
+}
+.added_to_cart.wc-forward {
+  background-color: #7fad39;
+  width: 100%;
+  display: block;
+  position: absolute;
+  border-radius: 0;
+  left: 0;
+  bottom: 120px;
+  border: 0;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 600;
+  line-height: 22px;
+}
+.woocommerce a.button.added::after {
+  display: none;
+}
+.yith-wcwl-add-button span {
+  display: none;
+}
+.yith-wcwl-icon.fa.fa-heart-o {
+  margin-left: 10px;
+}
+.woocommerce-loop-product__title {
+  font-size: 26px !important;
+  font-weight: 600;
+}
+.product__item__text span a {
+  color: #222;
+}
+.shop-page {
+  padding: 80px 0;
+}
+.product,
+.featured {
+  padding: 0;
+  list-style: none;
+}
+.product__details__text .product__details__rating span {
+  color: #edbb0e;
+  margin-left: 0;
+}
+.woocommerce-review-link,
+.woocommerce-review-link span {
+  color: #dd2222 !important;
+  font-weight: 500;
+}
+
+
 
